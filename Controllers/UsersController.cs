@@ -89,7 +89,7 @@ public class UsersController : ControllerBase
     }
 
     [Authorize]
-    [HttpPatch("{id}/email")]
+    [HttpPatch("{id}")]
     public async Task<IActionResult> ChangeEmail(int id, [FromBody] ChangeEmailDTO changeEmailDto)
     {
         if (id <= 0)
